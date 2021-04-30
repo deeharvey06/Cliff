@@ -27,27 +27,35 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-1ce2104882a13bee2e3f.js"
+    "url": "webpack-runtime-7c7fc624ebb9c7e1ae39.js"
   },
   {
     "url": "framework-dbb498007a7447f28d8e.js"
   },
   {
-    "url": "app-db664a953ea5dbc6f7f6.js"
+    "url": "app-ec4b53e63f5e399c93f2.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "96caf8a2ec80a00db92bee1a072da05d"
+    "revision": "c42b2f2550f207e80f794cae0c3ebaa4"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-b0556ce5127c1a3e2490.js"
+  },
+  {
+    "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
+    "revision": "f6081b83111aea4128c98944b7fafccc"
+  },
+  {
+    "url": "page-data/app-data.json",
+    "revision": "488209888b2bb94c345c649c374b9255"
   },
   {
     "url": "polyfill-57fa76c8ad53bd44c5a1.js"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "a4aff537d11c11b5a663de6094eeda6b"
+    "revision": "dbe53b05ad4cf89b86bd79ae5a2fa921"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -134,12 +142,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   lastNavigationRequest = event.request.url
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^`), ``)
+  pathname = pathname.replace(new RegExp(`^/cliff`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-db664a953ea5dbc6f7f6.js`))) {
+  if (!resources || !(await caches.match(`/cliff/app-ec4b53e63f5e399c93f2.js`))) {
     return await fetch(event.request)
   }
 
@@ -152,7 +160,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/cliff/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
