@@ -28,7 +28,7 @@ export const aboutData = {
 export const projectsData = [
   {
     id: nanoid(),
-    img: 'upwisefull.png',
+    img: 'upwise.png',
     title: 'UpWise',
     info: '',
     info2: '',
