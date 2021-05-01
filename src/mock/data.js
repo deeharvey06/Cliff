@@ -18,9 +18,10 @@ export const heroData = {
 // ABOUT DATA
 export const aboutData = {
   img: 'profile.jpeg',
-  paragraphOne: '',
-  paragraphTwo: '',
-  paragraphThree: '',
+  paragraphOne:
+    'Software Engineer with experience building full stack JavaScript applications. Currently working with React/Redux and Node . Employed targeted functions that used lifecycle methods to access and collect state from React components and hot-reload an updated SVG rendering of the parsed data .',
+  paragraphTwo: '...',
+  paragraphThree: '...',
   resume: 'https://www.resumemaker.online/es.php', // if no resume, the button will not show up
 };
 

@@ -18,6 +18,8 @@
 
     .row {
       margin-bottom: 8rem;
+      overflow-y: hidden;
+      max-height: 385px;
 
       @include respond(phone) {
         margin-bottom: 4rem;
