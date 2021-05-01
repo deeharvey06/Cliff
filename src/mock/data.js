@@ -30,8 +30,9 @@ export const projectsData = [
     id: nanoid(),
     img: 'upwise.png',
     title: 'UpWise',
-    info: '',
-    info2: '',
+    info: 'A financial wellness app that helps you make progress that feels good.',
+    info2:
+      'Ionic TypeScript React Hooks Jest React Testing Library Docker Node Microservice Nest Mongodb',
     url: 'https://www.upwise.com/',
     repo: '', // if no repo, the button will not show up
   },
@@ -39,8 +40,8 @@ export const projectsData = [
     id: nanoid(),
     img: 'noblefits.png',
     title: 'Noble Fits',
-    info: '',
-    info2: '',
+    info: 'Massive E-Commerce Application ',
+    info2: 'React Hooks Redux Redux Sagas Jest Enzyme Firebase',
     url: 'https://noble-live.herokuapp.com/',
     repo: 'https://github.com/deeharvey06/noblefits', // if no repo, the button will not show up
   },
@@ -48,10 +49,10 @@ export const projectsData = [
     id: nanoid(),
     img: 'smartbrain.png',
     title: 'Smart Brain',
-    info: '',
-    info2: '',
+    info: 'Image Recognition Application using a Machine Learning API',
+    info2: 'React Hooks Redux Redux Thunk Jest Enzyme Docker Node Express PostgreSQL',
     url: 'https://deeharvey06.github.io/smartbrain/',
-    repo: '', // if no repo, the button will not show up
+    repo: 'https://github.com/deeharvey06/smartbrain', // if no repo, the button will not show up
   },
 ];
 
